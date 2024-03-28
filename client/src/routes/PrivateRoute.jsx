@@ -4,9 +4,9 @@ import { Navigate } from 'react-router-dom'
 
 const PrivateRoute = ({children}) => {
 
-  const token = useSelector(store=> store.userReducer.token)
-
-  if(token){
+  const lsData = JSON.parse(localStorage.getItem('token'))
+  
+  if(lsData.token){
     return children
   }
   else{

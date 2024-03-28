@@ -13,10 +13,7 @@ export const reducer = (state = initialState, action)=> {
             return {...state, isLoading: true}
 
         case GET_USER_SUCCESS:
-            return {...state, isLoading: false, token: action.payload.token, username: action.payload.username}    
-
-        case LOGOUT_USER:
-            return {...state, token: null, username: null}    
+            return {...state, isLoading: false, token: action.payload.token, username: action.payload.username}     
 
         default:
             return state    

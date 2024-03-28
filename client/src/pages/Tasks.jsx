@@ -17,6 +17,7 @@ import {
   Input,
   Stack
 } from '@chakra-ui/react'
+
 const Tasks = () => {
   const tasks = useSelector(store=> store.taskReducer.tasks)
   const [flag, setFlag] = useState(false)
@@ -58,10 +59,7 @@ const Tasks = () => {
     }
 
     dispatch(updateTask(id, obj))
-
-    setTimeout(()=> {
-      window.location.reload()
-    }, 800)
+    onClose()
   }
 
   return (

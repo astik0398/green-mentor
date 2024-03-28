@@ -13,7 +13,11 @@ export const registerUser = (formData)=>(dispatch)=> {
 export const loginUser = (formData)=> (dispatch)=> {
     let response = axios.post('https://green-mentor-backend.onrender.com/user/login', formData)
     response.then(function(res){
-        console.log(res);
-        dispatch({type: GET_USER_SUCCESS, payload: {token: res.data.token, username: res.data.username}})
+        let obj = {
+            token: res.data.token,
+            username: res.data.username
+        }
+        localStorage.setItem('token', JSON.stringify(obj))
+        dispatch({type: GET_USER_SUCCESS, payload: {token: res.data.token,  username: res.data.username}})
     })
 }
