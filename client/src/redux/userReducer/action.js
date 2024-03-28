@@ -17,6 +17,7 @@ export const loginUser = (formData)=> (dispatch)=> {
             token: res.data.token,
             username: res.data.username
         }
+        console.log(res);
         localStorage.setItem('token', JSON.stringify(obj))
         dispatch({type: GET_USER_SUCCESS, payload: {token: res.data.token,  username: res.data.username}})
     })
