@@ -5,13 +5,13 @@ Stay organized and productive with our Task Management app. This app helps you k
 ## Screenshots
 
 # `1`
-![alt text](<scrnli_3_29_2024_2-36-15 AM.png>)
-
-# `2`
 ![alt text](<scrnli_3_29_2024_2-26-56 AM.png>)
 
-# `3`
+# `2`
 ![alt text](<scrnli_3_29_2024_2-35-55 AM.png>)
+
+# `3`
+![alt text](<scrnli_3_29_2024_2-36-15 AM.png>)
 
 ## Key Features
 
