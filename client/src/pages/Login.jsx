@@ -1,16 +1,17 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { loginUser } from '../redux/userReducer/action';
+import { store } from '../redux/store';
 
 const Login = () => {
   const [formData, setFormData] = useState({
-    email: 'sumit@gmail.com',
-    password: 'sumit1230',
+    email: '',
+    password: '',
   });
  const dispatch = useDispatch()
  const navigate = useNavigate()
- const isAuth = useSelector(store=> store.userReducer.isAuth)
+ const token = useSelector(store=> store.userReducer.token)
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,7 +26,7 @@ const Login = () => {
     dispatch(loginUser(formData))
   };
 
-  if(isAuth){
+  if(token){
     navigate('/tasks')
   }
 

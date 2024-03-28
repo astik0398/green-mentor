@@ -4,9 +4,9 @@ import { Navigate } from 'react-router-dom'
 
 const PrivateRoute = ({children}) => {
 
-  const isAuth = useSelector(store=> store.userReducer.isAuth)
+  const token = useSelector(store=> store.userReducer.token)
 
-  if(isAuth){
+  if(token){
     return children
   }
   else{

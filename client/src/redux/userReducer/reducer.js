@@ -1,10 +1,10 @@
-import { GET_USER_REQUEST, GET_USER_SUCCESS } from "./actionType"
+import { GET_USER_REQUEST, GET_USER_SUCCESS, LOGOUT_USER } from "./actionType"
 
 const initialState = {
     isLoading: false,
     username: null,
     isError: false,
-    isAuth: false
+    token: null,
 }
 
 export const reducer = (state = initialState, action)=> {
@@ -13,7 +13,10 @@ export const reducer = (state = initialState, action)=> {
             return {...state, isLoading: true}
 
         case GET_USER_SUCCESS:
-            return {...state, isLoading: false, username: action.payload, isAuth: true}    
+            return {...state, isLoading: false, token: action.payload.token, username: action.payload.username}    
+
+        case LOGOUT_USER:
+            return {...state, token: null, username: null}    
 
         default:
             return state    

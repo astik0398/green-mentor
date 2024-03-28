@@ -10,9 +10,10 @@ export const registerUser = (formData)=>(dispatch)=> {
     })
 }
 
-export const loginUser = (obj)=> (dispatch)=> {
-    let response = axios.post('https://green-mentor-backend.onrender.com/user/login', obj)
+export const loginUser = (formData)=> (dispatch)=> {
+    let response = axios.post('https://green-mentor-backend.onrender.com/user/login', formData)
     response.then(function(res){
-        dispatch({type: GET_USER_SUCCESS, payload: res.data.username})
+        console.log(res);
+        dispatch({type: GET_USER_SUCCESS, payload: {token: res.data.token, username: res.data.username}})
     })
 }
