@@ -22,7 +22,7 @@ const AllRoutes = () => {
               </PrivateRoute>
             }/>
             <Route path='/signup' element={<Signup/>}/>
-            <Route path='*' element={<PageNotFound/>}/>
+            <Route path='/*' element={<PageNotFound/>}/>
         </Routes>
     </div>
   )
