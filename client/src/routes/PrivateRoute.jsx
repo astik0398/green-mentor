@@ -6,7 +6,7 @@ const PrivateRoute = ({children}) => {
 
   const lsData = JSON.parse(localStorage.getItem('token'))
   
-  if(lsData.token){
+  if(lsData?.token){
     return children
   }
   else{
