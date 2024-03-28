@@ -62,6 +62,7 @@ const Tasks = () => {
     onClose()
   }
 
+  
   return (
     <div className="TodoList">
       <NewTodoForm/>
