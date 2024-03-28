@@ -17,7 +17,7 @@ taskRouter.post('/add', async(req, res)=> {
             ...req.body
         })
         await task.save()
-        res.status(200).send({"message": "task has been added !"})
+        res.status(200).send({"message": "task has been added !", "task": task})
     } catch (error) {
         console.log(error);
     }
