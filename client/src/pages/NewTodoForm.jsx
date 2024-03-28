@@ -21,7 +21,10 @@ const NewTodoForm = () => {
         }
 
         dispatch(addTask(obj))
-        window.location.reload()
+        
+        setTimeout(()=> {
+            window.location.reload()
+          }, 800)
     }
   return (
     <form className="NewTodoForm" onSubmit={handleAdd}>

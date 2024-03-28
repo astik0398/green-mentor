@@ -14,6 +14,10 @@ const Tasks = () => {
 
   function handleDelete(id){
     dispatch(deleteTask(id))
+
+    setTimeout(()=> {
+      window.location.reload()
+    }, 800)
   }
 
   return (
