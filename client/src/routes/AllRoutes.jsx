@@ -6,6 +6,7 @@ import Tasks from '../pages/Tasks'
 import Signup from '../pages/Signup'
 import PrivateRoute from './PrivateRoute'
 import { ChakraProvider } from '@chakra-ui/react'
+import PageNotFound from '../pages/PageNotFound'
 
 const AllRoutes = () => {
   return (
@@ -21,6 +22,7 @@ const AllRoutes = () => {
               </PrivateRoute>
             }/>
             <Route path='/signup' element={<Signup/>}/>
+            <Route path='*' element={<PageNotFound/>}/>
         </Routes>
     </div>
   )
