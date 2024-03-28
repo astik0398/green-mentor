@@ -21,16 +21,14 @@ const NewTodoForm = () => {
         }
 
         dispatch(addTask(obj))
-        
-        setTimeout(()=> {
-            window.location.reload()
-          }, 800)
+    
     }
   return (
     <form className="NewTodoForm" onSubmit={handleAdd}>
     <label htmlFor="task"><h3>TODOS</h3></label>
     <input
       id="task"
+      style={{color:'black'}}
       onChange={(e)=> setTitle(e.target.value)}
       value={title}
       type="text"
@@ -38,6 +36,7 @@ const NewTodoForm = () => {
       placeholder="Task Title"
     />
     <input
+    style={{color:'black'}}
       id="task"
       onChange={(e)=> setDescription(e.target.value)}
       value={description}
@@ -45,7 +44,7 @@ const NewTodoForm = () => {
       name="task"
       placeholder="Task Description"
     />
-    <select id="task"
+    <select style={{color:'black'}} id="task"
     onChange={(e)=> setPriority(e.target.value)}
     value={priority}
     >

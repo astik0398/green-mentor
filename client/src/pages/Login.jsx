@@ -5,8 +5,8 @@ import { loginUser } from '../redux/userReducer/action';
 
 const Login = () => {
   const [formData, setFormData] = useState({
-    email: '',
-    password: '',
+    email: 'sumit@gmail.com',
+    password: 'sumit1230',
   });
  const dispatch = useDispatch()
  const navigate = useNavigate()

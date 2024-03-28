@@ -5,6 +5,7 @@ import Login from '../pages/Login'
 import Tasks from '../pages/Tasks'
 import Signup from '../pages/Signup'
 import PrivateRoute from './PrivateRoute'
+import { ChakraProvider } from '@chakra-ui/react'
 
 const AllRoutes = () => {
   return (
@@ -14,7 +15,9 @@ const AllRoutes = () => {
             <Route path='/login' element={<Login/>}/>
             <Route path='/tasks' element={
               <PrivateRoute>
+                <ChakraProvider>
                 <Tasks/>
+                </ChakraProvider>
               </PrivateRoute>
             }/>
             <Route path='/signup' element={<Signup/>}/>

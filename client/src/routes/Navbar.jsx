@@ -12,7 +12,7 @@ const Navbar = () => {
         <Link style={{color:'white', textDecoration:'none'}} to={'/'}>HOME</Link>
         <Link style={{color:'white', textDecoration:'none'}} to={'/tasks'}>TASKS</Link>
         <div style={{display:'flex', justifyContent:'center', alignItems:'center', gap:'20px'}}>
-        <p style={{color:'white', textDecoration:'none'}}>{isAuth ? username.toUpperCase() : null}</p>
+        <p style={{color:'white', textDecoration:'none'}}>{isAuth ? username : null}</p>
         {isAuth ? <button className='button'><Link style={{color:'white', textDecoration:'none'}} to={'/login'}>LOGOUT</Link></button> : <button className='button'><Link style={{color:'white', textDecoration:'none'}} to={'/login'}>LOGIN</Link></button>}
         </div>
     </div>
