@@ -1,0 +1,12 @@
+.button {
+    background: #ff6666;
+    border: none;
+    border: 1px solid rgba(243, 243, 243, 0.3);
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  

@@ -28,7 +28,7 @@ const NewTodoForm = () => {
     }
   return (
     <form className="NewTodoForm" onSubmit={handleAdd}>
-    <label htmlFor="task">New todo</label>
+    <label htmlFor="task"><h3>TODOS</h3></label>
     <input
       id="task"
       onChange={(e)=> setTitle(e.target.value)}

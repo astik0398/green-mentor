@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { loginUser } from '../redux/userReducer/action';
 
@@ -10,6 +10,7 @@ const Login = () => {
   });
  const dispatch = useDispatch()
  const navigate = useNavigate()
+ const isAuth = useSelector(store=> store.userReducer.isAuth)
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,8 +23,12 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(loginUser(formData))
-    navigate('/tasks')
   };
+
+  if(isAuth){
+    navigate('/tasks')
+  }
+
   return (
     <div style={{ textAlign: 'center', padding: '20px', width:'600px', margin:'auto',  marginTop:'25vh', backgroundColor:'#ff6666',
     boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px' }}>
@@ -36,7 +41,7 @@ const Login = () => {
             placeholder="Email"
             value={formData.email}
             onChange={handleChange}
-            style={{ padding: '5px', marginRight: '10px' }}
+            style={{ padding: '5px', marginRight: '10px', borderRadius:'5px', width:'250px', height:'25px', border:'none' }}
           />
         </div>
         <div style={{ marginBottom: '10px' }}>
@@ -46,14 +51,14 @@ const Login = () => {
             placeholder="Password"
             value={formData.password}
             onChange={handleChange}
-            style={{ padding: '5px', marginRight: '10px' }}
+            style={{ padding: '5px', marginRight: '10px', borderRadius:'5px', width:'250px', height:'25px', border:'none' }}
           />
         </div>
-        <button type="submit" style={{ padding: '5px 10px', cursor: 'pointer' }}>
+        <button type="submit" style={{ padding: '5px 10px', cursor: 'pointer', borderRadius:'5px',marginTop:'20px', border:'none', height:'30px', width:'100px' }}>
           Login
         </button>
 
-        <p style={{color:'white'}}>new to the platform ? <span><Link to={'/signup'}>Signup</Link></span></p>
+        <p style={{color:'white'}}>new to the platform ? <span ><Link style={{color:'black'}} to={'/signup'}>Signup</Link></span></p>
       </form>
     </div>
   )

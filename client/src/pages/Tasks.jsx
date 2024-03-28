@@ -28,7 +28,7 @@ const Tasks = () => {
           <li style={{marginBottom:'5px'}}><b>Title: {item.title}</b></li>
           <li style={{marginBottom:'5px'}}><b>Description: {item.description}</b></li>
           <li style={{marginBottom:'5px'}}><b>Priority: {item.priority}</b></li>
-          <li style={{marginBottom:'5px'}}><b>Status: {item.status ? 'Completed':'Not Completed'}</b></li>
+          <li style={{marginBottom:'5px'}}><b>Status: {item.status ? <span style={{color: 'green'}}>Completed</span>: <span style={{color:'red'}}>Not Completed</span>}</b></li>
           <div >
           <button style={{border:'none', borderRadius:'5px', height:'25px'}}>
             Edit

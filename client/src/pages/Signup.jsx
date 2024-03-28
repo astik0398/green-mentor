@@ -28,7 +28,7 @@ const Signup = () => {
       };
 
   return (
-    <div style={{ textAlign: 'center', padding: '20px', width:'600px', margin:'auto',  marginTop:'25vh', backgroundColor:'#ff6666',
+    <div style={{ textAlign: 'center', padding: '25px', width:'600px', margin:'auto',  marginTop:'25vh', backgroundColor:'#ff6666',
     boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px' }}>
       <h2 style={{color:'white'}}>Sign Up</h2>
       <form onSubmit={handleSubmit}>
@@ -39,7 +39,7 @@ const Signup = () => {
             placeholder="Username"
             value={formData.username}
             onChange={handleChange}
-            style={{ padding: '5px', marginRight: '10px' }}
+            style={{ padding: '5px', marginRight: '10px', borderRadius:'5px', width:'250px', height:'25px', border:'none' }}
           />
         </div>
         <div style={{ marginBottom: '10px' }}>
@@ -49,7 +49,7 @@ const Signup = () => {
             placeholder="Email"
             value={formData.email}
             onChange={handleChange}
-            style={{ padding: '5px', marginRight: '10px' }}
+            style={{ padding: '5px', marginRight: '10px', borderRadius:'5px', width:'250px', height:'25px', border:'none' }}
           />
         </div>
         <div style={{ marginBottom: '10px' }}>
@@ -59,10 +59,10 @@ const Signup = () => {
             placeholder="Password"
             value={formData.password}
             onChange={handleChange}
-            style={{ padding: '5px', marginRight: '10px' }}
+            style={{ padding: '5px', marginRight: '10px', borderRadius:'5px', width:'250px', height:'25px', border:'none' }}
           />
         </div>
-        <button type="submit" style={{ padding: '5px 10px', cursor: 'pointer' }}>
+        <button type="submit" style={{ padding: '5px 20px', cursor: 'pointer', borderRadius:'5px',marginTop:'20px', border:'none', height:'30px', width:'100px' }}>
           Sign Up
         </button>
       </form>
