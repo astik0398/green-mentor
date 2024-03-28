@@ -1,0 +1,16 @@
+.TodoList {
+    margin: 4rem auto;
+    padding: 2rem 3rem 3rem;
+    max-width: 900px;
+    background: #ff6666;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  
+  .TodoList ul {
+    margin-top: 2.6rem;
+    list-style: none;
+  }
+  
+  
+  
