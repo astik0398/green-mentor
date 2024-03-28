@@ -2,6 +2,17 @@
 
 Stay organized and productive with our Task Management app. This app helps you keep track of your tasks, manage deadlines, and stay focused on your goals. Whether you're organizing work projects, planning your daily routine, or simply making a shopping list, our app is designed to streamline your task management process.
 
+## Screenshots
+
+# `1`
+![alt text](<scrnli_3_29_2024_2-36-15 AM.png>)
+
+# `2`
+![alt text](<scrnli_3_29_2024_2-26-56 AM.png>)
+
+# `3`
+![alt text](<scrnli_3_29_2024_2-35-55 AM.png>)
+
 ## Key Features
 
 1. Add Tasks: Easily add new tasks with a title and optional details such as due dates, priorities, and notes.
